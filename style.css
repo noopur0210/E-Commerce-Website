@@ -2,7 +2,6 @@
 *{
     margin: 0;
     padding: 0;
-    /* background-color: #fcf0d6; */
 }
 
 /* The navigation panel */
@@ -32,7 +31,6 @@
 .logo{
     float: left;
     flex: 30%;
-    /* width: 35%; */
 }
 
 /* Making the logo crisp */
@@ -49,7 +47,6 @@
 .navbar{
     float: right;
     flex: 70%;
-    /* width: 65%; */
     margin-top: 2.5%;
     display: flex;
     justify-content: flex-end;
@@ -93,7 +90,6 @@
     background-attachment: fixed;
     background-color: #fcf0d6;
     height: 80vh;
-    top: -1rem;
 }
 .main .main_content{
     margin-top: -2rem; 
@@ -177,7 +173,6 @@
 }
 .products .product-container .item{
     padding:1%;
-    /* width: 25%; */
     margin: 10px;
     height: auto;
     text-align: center;
@@ -280,7 +275,6 @@
     }
 }
 .highlights .key-container .key-content{
-    /* width: 40%; */
     padding: 1%;
     float: left;
 }
@@ -298,7 +292,6 @@
     background-color: #eed9c6;
 }
 .highlights .key-container .key-img{
-    /* width: 40%; */
     float: right;
 }
 .highlights .key-container .key-image img{
