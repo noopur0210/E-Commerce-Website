@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: #fcf0d6; */
+}
+
+
+/* The navigation panel */
+.nav{
+    background-color: #fcf0d6;
+    /* z-index makes the logo stay on top of any other image when scrolling the page */
+    z-index: 21; 
+    display: flex;
+    justify-content:space-between;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+@media (max-width: 800px) {
+    .nav{
+      flex-direction: column;
+    }
+    
+}
+/* Fixing the navigation panel on top */
+.nav_top{
+    position:sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+/* Setting the logo on left */
+.logo{
+    float: left;
+    flex: 30%;
+    /* width: 35%; */
+}
+
+/* Making the logo crisp */
+.logo img{
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+    padding: 1.5%;
+}
+
+/* Setting the navbar on right and justifying all its contents to the most end */
+.navbar{
+    float: right;
+    flex: 70%;
+    /* width: 65%; */
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+@media (max-width: 800px) {
+    .navbar{
+      justify-content: center;
+    }
+}
+/* 
+@media (max-width: 800px) {
+    .logo .navbar{
+      flex:100%;
+    }
+} */
+/* Customising anchors in navbar */
+.navbar a{
+    margin: 0 1% 0 1%;
+    text-decoration: none;
+    font-family: 'Tajawal', sans-serif;
+    font-size: x-large;
+    font-weight: 700;
+    padding-right: 3%;
+    color: #036671;
+}
+
+/* Giving anchor more details */
+.navbar a:hover{
+    text-decoration: underline;
+    color: #f5927c;
+    transition: all 0.5s ease;
+}
+
+/* Creating the Products section */
+.products{
+    background-color: #fcf0d6;
+    padding: 2%;
+}
+.products h1{
+    padding: 0 3% 3% 3%;
+    color: #473c2f;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 5px 5px 10px #664621;
+    font-family: 'Dancing Script', cursive;
+}
+.products .sofa,.mattress,.desk{
+    display: grid; 
+    justify-content: space-around;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.products .sofa .sofa-heading,.mattress .mattress-heading,.desk .desk-heading {
+    padding: 0 3% 3% 3%;
+    color: #043d2f;
+    text-align: left;
+    font-size: 25px;
+    text-shadow: 2px 2px 7px #063b04;
+    font-family: 'Tajawal', sans-serif;
+    border-left: 5px solid #473c2f;
+}
+.products .sofa .sofa-row1, .sofa-row2{
+    display: flex; 
+    justify-content: space-around;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 2% 0 2% 0;
+}
+.products .mattress .mattress-row1, .mattress-row2{
+    display: flex; 
+    justify-content: space-around;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 2% 0 2% 0;
+}
+.products .desk .desk-row1, .desk-row2{
+    display: flex; 
+    justify-content: space-around;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 2% 0 2% 0;
+}
+ @media (max-width: 800px) {
+    .sofa-row1,.sofa-row2,.mattress-row1,.mattress-row2,.desk-row1,.desk-row2{
+       flex-direction: column;
+     }
+}
+.products .product-container .item{
+    padding:1%;
+    /* width: 25%; */
+    margin: 10px;
+    height: auto;
+    text-align: center;
+}
+.products .product-container .item:hover{
+    border: none;
+    background-color: #c0726b;
+    box-shadow: 3px 3px 10px #503223;
+    border-radius: 15px;
+}
+.products .product-container .item .item-img{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.products .product-container .item .item-content{
+    padding: 3%;
+}
+.products .product-container .item .item-content h3{
+    font-size: 35px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    text-decoration: overline;
+    color: #075548;
+}
+.products .product-container .item .item-content p{
+    font-size: 15px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+    color: #3b4619;
+}
+.products .product-container .item .item-content a{
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color:#d18c2b;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Tajawal', sans-serif;
+    border-radius: 15px;
+    color: #505247;
+}
+.products .product-container .item .item-content a:hover{
+    background-color: #0e463d;
+    color: #9de0d8;
+    border-bottom: 5px solid #e79908;
+    transition: all 0.5 ease;
+}
+
+/* Customizing footer */
+footer{
+    background-color: #5ca0a0;
+    margin-bottom: -1rem;
+    padding: 1.5% 1.5% 0 1.5%;
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+}
+footer p{
+    text-align: left;
+    font-size: 12px;
+}
+footer .footer-logo{
+    text-align: left;
+}
+footer h3{
+    color: #085d68;
+    font-size: 25px;
+    margin: 1%;
+    font-weight: normal;
+}
+footer a{
+    text-decoration: none;
+    margin: 1%;
+    font-size: 17px;
+    color: #813d33;
+}
+footer a:hover{
+    text-decoration: none;
+    color: #df8284;
+}
+footer .social a{
+    font-size: 27px;
+}
+footer .contact a{
+    font-size: 27px;
+}

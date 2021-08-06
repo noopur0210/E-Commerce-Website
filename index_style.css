@@ -1,0 +1,536 @@
+/* Removing all the default margins and paddings */
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: #fcf0d6; */
+}
+
+
+/* The navigation panel */
+.nav{
+    background-color: #fcf0d6;
+    /* z-index makes the logo stay on top of any other image when scrolling the page */
+    z-index: 21; 
+    display: flex;
+    justify-content:space-between;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+@media (max-width: 800px) {
+    .nav{
+      flex-direction: column;
+    }
+    
+}
+/* Fixing the navigation panel on top */
+.nav_top{
+    position:sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+/* Setting the logo on left */
+.logo{
+    float: left;
+    flex: 30%;
+    /* width: 35%; */
+}
+
+/* Making the logo crisp */
+.logo img{
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+    padding: 1.5%;
+}
+
+/* Setting the navbar on right and justifying all its contents to the most end */
+.navbar{
+    float: right;
+    flex: 70%;
+    /* width: 65%; */
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+@media (max-width: 800px) {
+    .navbar{
+      justify-content: center;
+    }
+}
+/* 
+@media (max-width: 800px) {
+    .logo .navbar{
+      flex:100%;
+    }
+} */
+/* Customising anchors in navbar */
+.navbar a{
+    margin: 0 1% 0 1%;
+    text-decoration: none;
+    font-family: 'Tajawal', sans-serif;
+    font-size: x-large;
+    font-weight: 700;
+    padding-right: 3%;
+    color: #036671;
+}
+
+/* Giving anchor more details */
+.navbar a:hover{
+    text-decoration: underline;
+    color: #f5927c;
+    transition: all 0.5s ease;
+}
+
+/* Setting up the main section */
+.main{
+    background-image: url('images/furniture_main.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #fcf0d6;
+    height: 80vh;
+}
+.main .main_content{
+    margin-top: -2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    
+}   
+.main .main_content h2{
+    padding-top: 10%;
+    color: #1c595f;
+    font-size: 40px;
+    font-family: 'Tajawal', sans-serif;
+    font-style: italic;
+}
+.main .main_content span{
+    color: #006872;
+    font-family: 'Bree Serif', serif;
+    font-style: normal;
+    font-weight: 900;
+}
+.main .main_content h3{
+    color: #df8284;
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+.main .main_content  p{
+    color: #067265;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: 'Tajawal', sans-serif;
+    font-style:italic;
+}
+.main .main_content .button{
+    margin-top: 40px;
+    padding-top: 20px;
+}
+.main .main_content .button a{
+    padding: 10px;
+    background-color: #ac8f4d;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Tajawal', sans-serif;
+    border-radius: 15px;
+    color: #505247;
+}
+.main .main_content .button a:hover{
+    background-color: #166357;
+    color: #06be4d;
+    border-bottom: 5px solid #e79908;
+    transition: all 0.5 ease;
+}
+
+/* Creating the Products section */
+.products{
+    background-color: #e4c2b1;
+    padding: 2%;
+}
+.products h1{
+    padding: 0 3% 3% 3%;
+    color: #473c2f;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 5px 5px 10px #664621;
+    font-family: 'Dancing Script', cursive;
+}
+@media (max-width: 800px) {
+    .products{
+      flex-direction: column;
+    }
+}
+.products .product-container{
+   display: flex; 
+   justify-content: space-around;
+   margin-left: 3%;
+   margin-right: 3%;
+}
+@media (max-width: 800px) {
+    .product-container{
+      flex-direction: column;
+    }
+}
+.products .product-container .item{
+    padding:1%;
+    /* width: 25%; */
+    margin: 10px;
+    height: auto;
+    text-align: center;
+}
+.products .product-container .item:hover{
+    border: none;
+    background-color: #c0726b;
+    box-shadow: 3px 3px 10px #503223;
+    border-radius: 15px;
+}
+.products .product-container .item .item-img{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.products .product-container .item .item-content{
+    padding: 3%;
+}
+.products .product-container .item .item-content h3{
+    font-size: 35px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    text-decoration: overline;
+    color: #075548;
+}
+.products .product-container .item .item-content p{
+    font-size: 15px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+    color: #3b4619;
+}
+.products .product-container .item .item-content a{
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color:#d18c2b;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Tajawal', sans-serif;
+    border-radius: 15px;
+    color: #505247;
+}
+.products .product-container .item .item-content a:hover{
+    background-color: #0e463d;
+    color: #9de0d8;
+    border-bottom: 5px solid #e79908;
+    transition: all 0.5 ease;
+}
+.products .explore-btn{
+    padding: 20px;
+    text-align: center;
+}
+.products .explore-btn p{
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    text-decoration: overline;
+    color: #075548;
+}
+.products .explore-btn a{
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color:#d18c2b;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Tajawal', sans-serif;
+    border-radius: 15px;
+    color: #505247;
+}
+.products .explore-btn a:hover{
+    background-color: #0e463d;
+    color: #9de0d8;
+    border-bottom: 5px solid #e79908;
+    transition: all 0.5 ease;
+}
+
+/* Customising highlights section */
+.highlights{
+    padding: 3%;
+    background-color: #e7a8a9;
+}
+.highlights h2{
+    color: #a54127;
+    padding: 0 3% 3% 3%;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 5px 5px 10px #664621;
+    font-family: 'Dancing Script', cursive;
+}
+.highlights .key-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (max-width: 800px) {
+    .key-container{
+      flex-direction: column;
+      justify-content: center;
+    }
+}
+.highlights .key-container .key-content{
+    /* width: 40%; */
+    padding: 1%;
+    float: left;
+}
+.highlights .key-container .key-content li{
+    margin: 10px;
+    padding: 15px;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    color: #0e463d;
+    font-family: 'Tajawal', sans-serif;
+    border-left: 5px solid #a14834;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #503223;
+    background-color: #eed9c6;
+}
+.highlights .key-container .key-img{
+    /* width: 40%; */
+    float: right;
+}
+.highlights .key-container .key-image img{
+    width: 100%;
+    margin-top: 5%;
+}
+
+/* Customizing the testimonial part */
+.testimonial{
+    padding: 3%;
+    background-color: #c59191;
+}
+.testimonial h2{
+    color: #0e463d;
+    padding: 0 3% 3% 3%;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 5px 5px 10px #664621;
+    font-family: 'Dancing Script', cursive;
+}
+.testimonial .testi-container{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+.testimonial .testi-container .item{
+    width: 100%;
+    /* margin: 20px; */
+    background-image: url('images/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:50vh;
+    box-shadow: none;
+}
+.testimonial .testi-container .item .testi-img{
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    text-align: center;
+}
+.testimonial .testi-container .item .testi-img img{
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.testimonial .testi-container .item .testi-content h3{
+    font-size: 40px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+    text-decoration: overline;
+    color: #254d05;
+}
+.testimonial .testi-container .item .testi-content p{
+    font-size: 20px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+    color: #614130;
+}
+.testimonial .testi-container .item .testi-content p span{
+    font-size: 57px;
+    color: #254d05;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Customising our team section */
+.team{
+    padding: 3%;
+    background-color: #9bbcb3;
+}
+.team h2{
+    color: #0f4553;
+    padding: 0 3% 3% 3%;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 5px 5px 10px #3a5961;
+    font-family: 'Dancing Script', cursive;
+}
+.team .team-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (max-width: 800px) {
+    .team-container{
+      flex-direction: column;
+      justify-content: center;
+    }
+}
+.team .team-container .team-video{
+    float: left;
+    flex: 40%;
+}
+.team .team-container .team-video video{
+    width: 650px;
+    margin: 3%;
+    border: 10px solid #083606;
+    outline: none;
+}
+.team .team-container .team-content{
+    flex: 60%;
+    padding: 2%;
+    float: right;
+    margin: 0 0 0 3%;
+}
+.team .team-container .team-content p{
+    padding: 0 15px 0 15px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 800;
+    color: #1d4c52;
+    font-family: 'Tajawal', sans-serif;  
+}
+
+/* Customizing feedback page */
+.feedback{
+    background-image: url('images/feedback.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    padding: 3%;
+}
+.feedback h3{
+    color: #144411;
+    padding: 0 3% 3% 3%;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 5px 5px 10px #4a7947;
+    font-family: 'Dancing Script', cursive;
+}
+.feedback .feed-form{
+    margin: auto;
+    padding: 0 3% 0 3%;
+    width: 50%;
+    height: 75%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 16px black;
+    background-color: #a7cfc4;
+    text-align: left;
+}
+.feedback .feed-form form{
+    padding: 7% 3% 7% 3%;
+    margin: 5%;
+    height: 80vh;
+}
+.feedback .feed-form form label{
+    margin: 10px 5px 5px 5px;
+    font-size: 19px; 
+    font-family: 'Tajawal', sans-serif;
+    color: #224068;
+}
+.feedback .feed-form form input{
+    margin: 5px 5px 10px 5px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 17px;
+    width: 100%;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #1b5544;
+}
+.feedback .feed-form form textarea{
+    margin: 5px 5px 10px 5px;
+    font-size: 17px;
+    width: 100%;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #1b5544;
+}
+.feedback .feed-form .button{
+    text-align: center;
+    margin: 2%;
+}
+.feedback .feed-form .button button{
+    font-size: 20px;
+    padding: 1% 3% 1% 3%;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+    background-color: #5d9659;
+    color: #ebddb7;
+}
+.feedback .feed-form .button button:hover{
+    background-color: #165714;
+    color: #f0e1b9;
+    border-bottom: 3px solid #fca510;
+    transition: all 0.5s ease;
+}
+
+/* Customizing footer */
+footer{
+    background-color: #5ca0a0;
+    margin-bottom: -1rem;
+    padding: 1.5% 1.5% 0 1.5%;
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+}
+footer p{
+    text-align: left;
+    font-size: 12px;
+}
+footer .footer-logo{
+    text-align: left;
+}
+footer h3{
+    color: #085d68;
+    font-size: 25px;
+    margin: 1%;
+    font-weight: normal;
+}
+footer a{
+    text-decoration: none;
+    margin: 1%;
+    font-size: 17px;
+    color: #813d33;
+}
+footer a:hover{
+    text-decoration: none;
+    color: #df8284;
+}
+footer .social a{
+    font-size: 27px;
+}
+footer .contact a{
+    font-size: 27px;
+}
+
+
